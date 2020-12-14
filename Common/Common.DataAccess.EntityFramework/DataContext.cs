@@ -21,6 +21,20 @@ namespace Common.DataAccess.EntityFramework
         public DbSet<UserClaim> UserClaims { get; set; }
         public DbSet<UserPhoto> UserPhotos { get; set; }
         public DbSet<Settings> Settings { get; set; }
+        public DbSet<Assignment> Assignments { get; set; }
+        public DbSet<Capacity> Capacities { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<PersonAvail> PersonAvails { get; set; }
+        public DbSet<PersonCapacity> PersonCapacities { get; set; }
+        public DbSet<PersonTaskType> PersonTaskTypes { get; set; }
+        public DbSet<PersonTraining> PersonTrainings { get; set; }
+        public DbSet<Person> Persons { get; set; }
+        public DbSet<ProjectPerson> ProjectPersons { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<Slot> Slots { get; set; }
+        public DbSet<TaskTypeCapacity> TaskTypeCapacities { get; set; }
+        public DbSet<TaskType> TaskTypes { get; set; }
+        public DbSet<Training> Trainings { get; set; }
 
         protected void InitContextSettings()
         {
