@@ -6,7 +6,6 @@ namespace Common.Entities
 {
     public class PersonCapacity : DeletableEntity
     {
-        public int Id { get; set; }
         public int PersonId { get; set; }
         public int CapacityId { get; set; }
 

@@ -6,7 +6,6 @@ namespace Common.Entities
 {
     public class PersonAvail : DeletableEntity
     {
-        public int Id { get; set; }
         public DateTime BeginTime { get; set; }
         public DateTime EndTime { get; set; }
         public bool IsAvailable { get; set; }

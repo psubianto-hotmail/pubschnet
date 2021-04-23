@@ -70,8 +70,8 @@ namespace Common.DataAccess.EntityFramework
 
             modelBuilder.Configurations.Add(new UserPhotoConfig());
             modelBuilder.Configurations.Add(new SettingsConfig());
-
-            modelBuilder.HasDefaultSchema("starter");
+        
+            modelBuilder.HasDefaultSchema("dbo");
         }
     }
 }

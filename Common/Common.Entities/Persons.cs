@@ -15,11 +15,10 @@ namespace Common.Entities
             ProjectPersons = new HashSet<ProjectPerson>();
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
         public bool? IsActive { get; set; }
         public int? SecurityLevel { get; set; }
-        public string Aspnetuserid { get; set; }
+        public string Userid { get; set; }
 
         public virtual ICollection<Assignment> Assignments { get; set; }
         public virtual ICollection<PersonAvail> PersonAvails { get; set; }

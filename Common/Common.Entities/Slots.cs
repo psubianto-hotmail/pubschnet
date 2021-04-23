@@ -11,7 +11,6 @@ namespace Common.Entities
             Assignments = new HashSet<Assignment>();
         }
 
-        public int Id { get; set; }
         public int ProjectId { get; set; }
         public DateTime BeginTime { get; set; }
         public DateTime EndTime { get; set; }

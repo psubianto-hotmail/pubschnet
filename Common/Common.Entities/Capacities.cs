@@ -12,7 +12,6 @@ namespace Common.Entities
             TaskTypeCapacities = new HashSet<TaskTypeCapacity>();
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<PersonCapacity> PersonCapacities { get; set; }
