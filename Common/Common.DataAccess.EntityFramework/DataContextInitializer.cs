@@ -17,7 +17,7 @@ namespace Common.DataAccess.EntityFramework
     {
         protected override void Seed(DataContext context)
         {
-            var schema = "starter";
+            var schema = "dbo";
             context.Session = new ContextSession() { UserId = 1 };
 
             var rnd = new Random();
@@ -65,6 +65,10 @@ SELECT [u].[Id], 0x89504E470D0A1A0A0000000D494844520000012C0000012C0806000000797
             // User Settings
             sqlCommand.Append($"INSERT INTO [{schema}].[Settings] ([Id], [ThemeName]) SELECT [u].[Id], 'default' FROM [{schema}].[Users] AS [u]");
             sqlCommand.AppendLine();
+
+            //Persons
+            sqlCommand.Append($"INSERT INTO [{schema}].[Persons] ([Name], [IsActive], [UserId], [IsDeleted]) VALUES ");
+            sqlCommand.Append($"('Peter Subianto', 1, SELECT Id FROM [{schema}].[Users] WHERE [Login] = '@Admin', 0) ");
 
             context.Database.CommandTimeout = 0;
             context.Database.ExecuteSqlCommand(sqlCommand.ToString());

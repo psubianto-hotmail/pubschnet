@@ -18,6 +18,8 @@ namespace Common.WebApi
             config.AddProfile<IdentityUserProfile>();
             config.AddProfile<UserProfile>();
             config.AddProfile<SettingsProfile>();
+            
+            config.AddProfile<PersonProfile>();
         }
     }
 }

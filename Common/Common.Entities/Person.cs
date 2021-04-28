@@ -17,8 +17,7 @@ namespace Common.Entities
 
         public string Name { get; set; }
         public bool? IsActive { get; set; }
-        public int? SecurityLevel { get; set; }
-        public string Userid { get; set; }
+        public int UserId { get; set; }
 
         public virtual ICollection<Assignment> Assignments { get; set; }
         public virtual ICollection<PersonAvail> PersonAvails { get; set; }

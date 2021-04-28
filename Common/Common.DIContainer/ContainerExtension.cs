@@ -27,6 +27,9 @@ namespace Common.DIContainer
             Container.RegisterType<IRoleRepository<Role>, RoleRepository>();
             Container.RegisterType<IUserRoleRepository<UserRole>, UserRoleRepository>();
             Container.RegisterType<IUserClaimRepository<UserClaim>, UserClaimRepository>();
+
+            Container.RegisterType<IPersonService, PersonService<Person>>();
+            Container.RegisterType<IPersonRepository<Person>, PersonRepository>();
         }
     }
 }

@@ -50,9 +50,9 @@
     <Compile Include="Configuration\System\UserRoleConfig.cs" />
     <Compile Include="Configuration\UserPhotoConfig.cs" />
     <Compile Include="DataContextInitializer.cs" />
-    <Compile Include="Migrations\202003082107001_Initial.cs" />
-    <Compile Include="Migrations\202003082107001_Initial.designer.cs">
-      <DependentUpon>202003082107001_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202104262122077_Initial.cs" />
+    <Compile Include="Migrations\202104262122077_Initial.designer.cs">
+      <DependentUpon>202104262122077_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,16 +60,12 @@
     <Compile Include="Repositories\IdentityUserRepository.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\RoleRepository.cs" />
+    <Compile Include="Repositories\PersonRepository.cs" />
     <Compile Include="Repositories\SettingsRepository.cs" />
     <Compile Include="Repositories\UserClaimRepository.cs" />
     <Compile Include="Repositories\UserPhotoRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Repositories\UserRoleRepository.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003082107001_Initial.resx">
-      <DependentUpon>202003082107001_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework">
@@ -91,6 +87,11 @@
       <Project>{eee2b04f-7f1d-46bb-9e88-2af178339e03}</Project>
       <Name>Common.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104262122077_Initial.resx">
+      <DependentUpon>202104262122077_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
