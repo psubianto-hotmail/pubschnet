@@ -28,7 +28,7 @@ namespace Common.DataAccess.EntityFramework
         public DbSet<PersonCapacity> PersonCapacities { get; set; }
         public DbSet<PersonTaskType> PersonTaskTypes { get; set; }
         public DbSet<PersonTraining> PersonTrainings { get; set; }
-        public DbSet<Person> Persons { get; set; }
+        public DbSet<Person> People { get; set; }
         public DbSet<ProjectPerson> ProjectPersons { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Slot> Slots { get; set; }

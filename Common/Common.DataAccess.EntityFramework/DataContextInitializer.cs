@@ -67,8 +67,8 @@ SELECT [u].[Id], 0x89504E470D0A1A0A0000000D494844520000012C0000012C0806000000797
             sqlCommand.AppendLine();
 
             //Persons
-            sqlCommand.Append($"INSERT INTO [{schema}].[Persons] ([Name], [IsActive], [UserId], [IsDeleted]) VALUES ");
-            sqlCommand.Append($"('Peter Subianto', 1, SELECT Id FROM [{schema}].[Users] WHERE [Login] = '@Admin', 0) ");
+            sqlCommand.Append($"INSERT INTO [{schema}].[People] ([Name], [IsActive], [UserId], [IsDeleted]) VALUES ");
+            sqlCommand.Append($"('Peter Subianto', 1, (SELECT Id FROM [{schema}].[Users] WHERE [Login] = '@Admin'), 0) ");
 
             context.Database.CommandTimeout = 0;
             context.Database.ExecuteSqlCommand(sqlCommand.ToString());
